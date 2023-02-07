@@ -1,12 +1,9 @@
 <?php
 
-function printString(array $elements): string {
+function detailssString(array $elements): string {
     return "<h2>Name: " . $elements['name'] . "</h2><p>Origin: " . $elements['origin'] . "</p><p>Description: " . $elements['description'] . "</p><p>Year: " . $elements['year'] . "</p>";
 }
 
-//function printPlease(array $array) {
-   // foreach($array as $elements) {
-       // echo "<h2>Name: " . $elements['name'] . "</h2><p>Origin: " . $elements['origin'] . "<//////p><p>Description: " . $elements['description'] . "</p><p>Year: " . $elements['year'] . "</p>";
-   // }
-   // return;
-//}
+function detailsString(array $elements): string {
+    return "<h2>Name: " . $elements['name'] . "</h2></a><p>Origin: " . $elements['origin'] . "</p><p>Description: " . $elements['description'] . "</p><p>Year: " . $elements['year'] . "</p>" . "<img src='images/" . $elements['image'] . "' alt='Photo of " . $elements['name'] . "' width='200'>";
+}
