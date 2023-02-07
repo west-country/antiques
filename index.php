@@ -1,6 +1,6 @@
 <?php
-require_once('functions.php');
-require_once('db.php');
+require_once('src/functions.php');
+require_once('src/db.php');
 ?>
 
 <html>
