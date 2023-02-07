@@ -1,6 +1,10 @@
 <?php
 require_once('src/functions.php');
 require_once('src/db.php');
+
+
+$db = connectToDb('collection');
+$antiques = getAllAntiques($db);
 ?>
 
 <html>
