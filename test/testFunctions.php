@@ -8,21 +8,10 @@ class Functions extends Testcase
 {
     public function testPrintPlease()
     {
-        $array = (      (
-            [id] => 1
-            [name] => Antique
-            [origin] => Wales
-            [description] => A description of antique
-            [year] => 1200
+        $elements = (
+            [id] => 1, [name] => Antique, [origin] => Wales, [description] => A description of antique, [year] => 1200;
         )
-        (
-        [id] => 2
-        [name] => Also Antique
-        [origin] => Belgium
-        [description] => A different description of an antique
-        [year] => 1200
-    )
-
-        )
+       $expectedOutput = "<h2>Name: " . $elements['name'] . "</h2><p>Origin: " . $elements['origin'] . "</p><p>Description: " . $elements['description'] . "</p><p>Year: " . $elements['year'] . "</p>";
+       $actualOutput = ""
     }
 }
