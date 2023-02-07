@@ -2,9 +2,12 @@
 require_once('src/functions.php');
 require_once('src/db.php');
 
-
 $db = connectToDb('collection');
 $antiques = getAllAntiques($db);
+
+//echo '<pre>';
+//print_r($antiques);
+//echo '<pre>';
 ?>
 
 <html>
@@ -19,8 +22,9 @@ $antiques = getAllAntiques($db);
             <p>Hello, welcome to my antique collection.<p>
 </header>
         <div>
-        <?=printPlease($antiques);?>
+        <?php foreach($antiques as $antique) {
+        echo printString($antique);
+        }?>
 </div>
-        <!--call function-->
    </body>
 </html>
