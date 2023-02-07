@@ -1,0 +1,20 @@
+* {
+    {
+        font-family: 'EB Garamond';
+    }
+}
+
+if(isset($_GET['sort'])) {
+    $sort = $_GET['sort'];
+}
+else {
+    $sort = "name";
+}
+
+<form action="index.php" method="get">
+<select name="sort" id="sort">
+<label for="sort">Sort</label>
+  <option value="year">Year (asc.)</option>
+  <option value="origin">Origin (alph.)</option>
+  <input type="submit" value="Submit">
+</form>

@@ -8,8 +8,8 @@ function connectToDb(string $dbName): PDO {
     return $db;
 }
 
-function getAllAntiques(PDO $db): array {
-	$query = $db->prepare('SELECT * FROM antiques;');
+function getAllAntiques(PDO $db, string $column = "name"): array {
+	$query = $db->prepare('SELECT * FROM antiques ORDER BY ' . $column . ';');
 	$query->execute();
 	return $query->fetchAll();
 }
