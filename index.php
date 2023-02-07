@@ -8,6 +8,8 @@ $antiques = getAllAntiques($db);
 //echo '<pre>';
 //print_r($antiques);
 //echo '<pre>';
+
+
 ?>
 
 <html>
