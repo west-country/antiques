@@ -18,8 +18,8 @@ class testFunctions extends Testcase
     public function testWrongKeys()
     {
         $elements = array(
-           "id" => "1", "notname" => "Antique", "origin" => "Wales", "notADescription" => "A description of antique", "year" => "1200", "noImage" => "image.jpg");
-           $this->expectException(Exception::class);
-           detailsString($elements);
+        "id" => "1", "notname" => "Antique", "origin" => "Wales", "notADescription" => "A description of antique", "year" => "1200", "noImage" => "image.jpg");
+        $this->expectException(Exception::class);
+        detailsString($elements);
     }
 }

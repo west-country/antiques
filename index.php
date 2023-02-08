@@ -4,18 +4,11 @@ require_once('src/db.php');
 
 $db = connectToDb('collection');
 
-
 $antiques = getAllAntiques($db);
-
-
-//echo '<pre>';
-//print_r($antiques);
-//echo '<pre>';
-
 
 ?>
 
-<html>
+<html lang="en">
 <head>
     <title>Mr Client's Antique Spoon Collection</title>
     <!--<link rel="stylesheet" type="text/css" href="style.css">-->
@@ -24,16 +17,14 @@ $antiques = getAllAntiques($db);
 </head>
 <body>
     <header class="header">
-            <h1>Mr Client's Antique Spoon Collection</h1>
-            <p>Hello, welcome to my antique spoon portal.<p>
-            <p>I hope you enjoy perusing my collection of antique spoons</p>
+        <h1>Mr Client's Antique Spoon Collection</h1>
+        <p>Hello, welcome to my antique spoon portal.<p>
+        <p>I hope you enjoy perusing my collection.</p>
     </header>
-    
-</select> 
     <div>
-    <?php foreach($antiques as $antique) {
-    echo detailsString($antique);
-    }?>
-</div>
+        <?php foreach($antiques as $antique) {
+        echo detailsString($antique);
+        }?>
+    </div>
    </body>
 </html>
