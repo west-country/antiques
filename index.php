@@ -11,6 +11,7 @@ $antiques = getAllAntiques($db);
 <html lang="en">
 <head>
     <title>Mr Client's Antique Spoon Collection</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <header class="header">

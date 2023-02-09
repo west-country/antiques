@@ -16,7 +16,7 @@ class testFunctions extends Testcase
             "year" => "1200", 
             "image" => "image.jpg"
         ];
-        $expectedOutput = "<h2>" . "Antique" . "</h2><p>Origin: " . "Wales" . "</p><p>Description: " . "A description of antique" . "</p><p>Year: " . "1200" . "</p>" . "<img src='images/" . "image.jpg" . "' alt='" . "Antique" . "' width='200'>";
+        $expectedOutput = "<h2>" . "Antique" . "</h2><p>Origin: " . "Wales" . "</p><p>Description: " . "A description of antique" . "</p><p>Year: " . "1200" . "</p>" . "<img src='images/" . "image.jpg" . "' alt='" . "Antique" . "'>";
         $actualOutput = displaySpoonDetails($elements);
         $this->assertEquals($expectedOutput, $actualOutput);
     }

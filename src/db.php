@@ -12,34 +12,3 @@ function getAllAntiques(PDO $db): array {
 	$query->execute();
 	return $query->fetchAll();
 }
-
-//story2
-
-function addToDB(PDO $db, array $array) {
-	$name = $array[0];
-	$origin = $array[1];
-	$description = $array[2];
-	$year = $array[3]; 
-	$image = $array[4];
-
-	$query = $db->prepare('INSERT INTO antiques (name, origin, description, year, image) VALUES (:name, :origin, :description, :year, :image);');
-	$query->execute(['name' => $name, 'origin' => $origin, 'description' => $description, 'year' => $year, 'image' => $image]);
-	return $query->fetchAll();
-	}
-
-	foreach($antiques as $antique) {
-	$nameArray .= $antique['name'];
-	}
-
-function removeFromDB(PDO $db, array $array) {
-	foreach($nameArray as $name) {
-		if($name != $_GET['removeName']) {
-		}
-	else {
-		$query = $db->prepare('DELETE FROM antiques WHERE name = :name;');
-		$query->execute(['name' => $name]);
-		return $query->fetchAll();
-	}
-	}
-throw new Exception("Name field must match existing entry\n");
-}
