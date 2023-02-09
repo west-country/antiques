@@ -21,18 +21,9 @@ $antiques = getAllAntiques($db);
     </header>
     <div>
         <?php foreach($antiques as $antique) {
-            echo displaySpoonDetails($antique);
-        }
         try {
-            $malArray = [
-                "kjaf" => "1", 
-                "anfgaon" => "Antique", 
-                "origin" => "Wales", 
-                "description" => "A description of antique"
-            ];
-            echo displaySpoonDetails($malArray);
-        }
-        catch (Exception $exception) {
+            echo displaySpoonDetails($antique);
+        } catch (Exception $exception) {
             error_log($exception->getMessage(), 3, 'serverLog.log');
         }?>
     </div>
