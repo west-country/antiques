@@ -15,12 +15,24 @@ $antiques = getAllAntiques($db);
 <body>
     <header class="header">
         <h1>Mr Client's Antique Spoon Collection</h1>
-        <p>Hello, welcome to my antique spoon portal.<p>
+        <p>Hello, welcome to my antique spoon portal.</p>
         <p>I hope you enjoy perusing my collection.</p>
     </header>
     <div>
         <?php foreach($antiques as $antique) {
-        echo detailsString($antique);
+            echo displaySpoonDetails($antique);
+        }
+        try {
+            $malArray = [
+                "kjaf" => "1", 
+                "anfgaon" => "Antique", 
+                "origin" => "Wales", 
+                "description" => "A description of antique"
+            ];
+            echo displaySpoonDetails($malArray);
+        }
+        catch (Exception $exception) {
+            error_log($exception->getMessage(), 3, 'serverLog.log');
         }?>
     </div>
    </body>
