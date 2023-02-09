@@ -21,14 +21,13 @@ if(isset($_GET['name']) && isset($_GET['origin']) && isset($_GET['description'])
         $nameArray[] = $antique["name"];
         }
     if(isset($_GET['removeName'])) {
-        foreach($nameArray as $name) {
+        //foreach($nameArray as $name) {
             removeFromDB($db, $name, $_GET['removeName'], );
-            echo "<p>'" . $_GET['name'] . "' successfully removed from the collection.<div><a href='index.php'> Go to homepage</a></div>";
             return;
         }
-        foreach($nameArray as $name)
+        //foreach($nameArray as $name)
     //throw new Exception("Name field must match existing entry\n");   
-    }
+    //}
     
 ?>
 

@@ -39,3 +39,20 @@ function removeFromDB(PDO $db, string $name, string $entryName) {
 		throw new Exception("Name field must match existing entry\n");
 	}
 }
+
+function removeFromDB(PDO $db, string $name, string $entryName) {
+foreach($nameArray as $name) {
+	if($name = $entryName) {
+		$query = $db->prepare('DELETE FROM antiques WHERE name = :name;');
+		$query->execute(['name' => $name]);
+		echo "<p>'" . $_GET['name'] . "' successfully removed from the collection.<div><a href='index.php'> Go to homepage</a></div>";
+		return $query->fetchAll();
+	}
+	else { 
+		$counter++
+	}
+	if($counter === count($array)) {
+		throw new Exception("Name field must match existing entry\n");
+	}
+}
+}
