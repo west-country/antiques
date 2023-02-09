@@ -25,6 +25,7 @@ $antiques = getAllAntiques($db);
             echo displaySpoonDetails($antique);
         } catch (Exception $exception) {
             error_log($exception->getMessage(), 3, 'serverLog.log');
+        }
         }?>
     </div>
    </body>
