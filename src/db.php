@@ -13,8 +13,6 @@ function getAllAntiques(PDO $db): array {
 	return $query->fetchAll();
 }
 
-//story2
-
 function addToDB(PDO $db, array $array) {
 	$name = $array[0];
 	$origin = $array[1];
@@ -27,19 +25,17 @@ function addToDB(PDO $db, array $array) {
 	return $query->fetchAll();
 	}
 
-	foreach($antiques as $antique) {
-	$nameArray .= $antique['name'];
-	}
 
-function removeFromDB(PDO $db, array $array) {
-	foreach($nameArray as $name) {
-		if($name != $_GET['removeName']) {
-		}
-	else {
+function removeFromDB(PDO $db, string $name, string $entryName) {
+	if($name = $entryName) {
 		$query = $db->prepare('DELETE FROM antiques WHERE name = :name;');
 		$query->execute(['name' => $name]);
 		return $query->fetchAll();
 	}
+	else { 
+		$counter++
 	}
-throw new Exception("Name field must match existing entry\n");
+	if($counter === count($array)) {
+		throw new Exception("Name field must match existing entry\n");
+	}
 }

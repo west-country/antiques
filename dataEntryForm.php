@@ -4,7 +4,7 @@
 
 require_once('src/db.php');
 require_once('src/functions.php');
-//require_once('index.php');
+require_once('index.php');
 
 $db = connectToDb('collection');
 
@@ -16,10 +16,20 @@ if(isset($_GET['name']) && isset($_GET['origin']) && isset($_GET['description'])
     echo "<p>'" . $_GET['name'] . "' successfully added to the collection.<div><a href='index.php'> Go to homepage</a></div>";
     }
 
-if(isset($_GET['name'])) {
-
-    if($_GET['name'] = )
-}
+    foreach($antiques as $antique) {
+        $nameArray = [];
+        $nameArray[] = $antique["name"];
+        }
+    if(isset($_GET['removeName'])) {
+        foreach($nameArray as $name) {
+            removeFromDB($db, $name, $_GET['removeName'], );
+            echo "<p>'" . $_GET['name'] . "' successfully removed from the collection.<div><a href='index.php'> Go to homepage</a></div>";
+            return;
+        }
+        foreach($nameArray as $name)
+    //throw new Exception("Name field must match existing entry\n");   
+    }
+    
 ?>
 
 
@@ -57,7 +67,9 @@ if(isset($_GET['name'])) {
         <div>
 <input type="text" name="removeName">
 <label for="name">Enter name of item</label>
+<div>
 <input type="submit" value="Submit">
+</div>
 </form>
 
 
