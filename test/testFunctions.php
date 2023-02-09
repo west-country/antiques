@@ -4,9 +4,9 @@ require_once('../src/functions.php');
 
 use PHPUnit\Framework\TestCase;
 
-class testFunctions extends Testcase
+class testFunctions extends TestCase
 {
-    public function testDisplaySpoonDetails()
+    public function testSuccessDisplaySpoonDetails()
     {   $elements = [
             "id" => "1", 
             "name" => "Antique", 
@@ -21,8 +21,9 @@ class testFunctions extends Testcase
         $this->assertEquals($expectedOutput, $actualOutput);
     }
 
-    public function testWrongKeys()
-    {   $elements = [
+    public function testFailureDisplaySpoonDetails_wrongKeys()
+    {   
+        $elements = [
             "id" => "1", 
             "notname" => "Antique", 
             "origin" => "Wales", 
