@@ -27,4 +27,19 @@ function addToDB(PDO $db, array $array) {
 	return $query->fetchAll();
 	}
 
-function removeFromDB()
+	foreach($antiques as $antique) {
+	$nameArray .= $antique['name'];
+	}
+
+function removeFromDB(PDO $db, array $array) {
+	foreach($nameArray as $name) {
+		if($name != $_GET['removeName']) {
+		}
+	else {
+		$query = $db->prepare('DELETE FROM antiques WHERE name = :name;');
+		$query->execute(['name' => $name]);
+		return $query->fetchAll();
+	}
+	}
+throw new Exception("Name field must match existing entry\n");
+}
