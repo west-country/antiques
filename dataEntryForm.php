@@ -16,6 +16,10 @@ if(isset($_GET['name']) && isset($_GET['origin']) && isset($_GET['description'])
     echo "<p>'" . $_GET['name'] . "' successfully added to the collection.<div><a href='index.php'> Go to homepage</a></div>";
     }
 
+if(isset($_GET['name'])) {
+
+    if($_GET['name'] = )
+}
 ?>
 
 
@@ -40,6 +44,19 @@ if(isset($_GET['name']) && isset($_GET['origin']) && isset($_GET['description'])
 <input type="text" name="image">
 <label for="image">Image (filename)</label>
     </div>
+<input type="submit" value="Submit">
+</form>
+
+
+</html>
+
+
+<html>
+<h1>Remove entry from collection</h1>
+    <form action="dataEntryForm.php" method="get">
+        <div>
+<input type="text" name="removeName">
+<label for="name">Enter name of item</label>
 <input type="submit" value="Submit">
 </form>
 

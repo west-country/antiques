@@ -13,9 +13,6 @@ function getAllAntiques(PDO $db): array {
 	return $query->fetchAll();
 }
 
-
-
-
 //story2
 
 function addToDB(PDO $db, array $array) {
@@ -29,3 +26,5 @@ function addToDB(PDO $db, array $array) {
 	$query->execute(['name' => $name, 'origin' => $origin, 'description' => $description, 'year' => $year, 'image' => $image]);
 	return $query->fetchAll();
 	}
+
+function removeFromDB()
